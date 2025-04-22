@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import Link from "next/link"
+import Image from "next/image" // Import Image component
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
@@ -12,6 +13,7 @@ export default function Navbar() {
     <nav className="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-md border-b border-purple-900/30">
       <div className="container mx-auto px-4 py-3 flex justify-between items-center">
         <Link href="/" className="flex items-center gap-2">
+          <Image src="/logo.png" alt="LuckFlix Logo" width={48} height={48} className="h-12 w-auto" />
           <span className="text-amber-500 font-bold text-2xl">LuckFlix</span>
         </Link>
 
