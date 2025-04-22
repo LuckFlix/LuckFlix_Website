@@ -60,11 +60,11 @@ export default function Footer() {
             </div>
             <div className="pt-2">
               <Link
-                href="mailto:contact@luckflix.com"
+                href="mailto:luckflix.app@gmail.com"
                 className="flex items-center gap-2 text-white/70 hover:text-amber-500 transition-colors"
               >
                 <Mail className="h-5 w-5" />
-                contact@luckflix.com
+                luckflix.app@gmail.com
               </Link>
             </div>
           </div>
