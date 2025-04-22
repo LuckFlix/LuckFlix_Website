@@ -14,7 +14,7 @@ export default function Footer() {
               Discover movies and TV shows with our unique roulette-style recommendation system.
             </p>
             <div className="flex gap-4">
-              <Link href="#" className="text-white/70 hover:text-amber-500 transition-colors">
+              <Link href="https://www.instagram.com/luckflix_app/" className="text-white/70 hover:text-amber-500 transition-colors">
                 <Instagram className="h-5 w-5" />
                 <span className="sr-only">Instagram</span>
               </Link>
