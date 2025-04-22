@@ -15,10 +15,10 @@ export default function ScreenshotsSection() {
       description: "Browse categories or spin the roulette for recommendations",
     },
     {
-      src: "/screenshots/roulette_feature.png", // Example path
-      alt: "LuckFlix Roulette Feature",
-      title: "Movie Roulette",
-      description: "Spin to discover your next favorite movie",
+      src: "/screenshots/genre_selection.png", // Updated path
+      alt: "LuckFlix Genre Selection Screen", // Updated alt text
+      title: "Genre Selection", // Updated title
+      description: "Choose your preferred genres for tailored recommendations.", // Updated description
     },
     {
       src: "/screenshots/movie_details.png", // Example path
