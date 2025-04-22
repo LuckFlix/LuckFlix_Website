@@ -17,6 +17,15 @@ export default function Home() {
       <Footer />
 
       <style jsx global>{`
+        @keyframes animateStars {
+          from {
+            background-position: 0 0;
+          }
+          to {
+            background-position: -200px -200px; /* background-size ile aynı değerler */
+          }
+        }
+
         .stars-bg {
           background-image: radial-gradient(2px 2px at 20px 30px, #ffffff, rgba(0, 0, 0, 0)),
                             radial-gradient(2px 2px at 40px 70px, #ffffff, rgba(0, 0, 0, 0)),
@@ -26,6 +35,7 @@ export default function Home() {
                             radial-gradient(2px 2px at 160px 120px, #ffffff, rgba(0, 0, 0, 0));
           background-repeat: repeat;
           background-size: 200px 200px;
+          animation: animateStars 50s linear infinite; /* Animasyon hızını artır (süreyi azalt) */
         }
       `}</style>
     </main>
