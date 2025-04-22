@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
+import { StoreButton } from "@/components/ui/store-button"
 import { Apple, Play } from "lucide-react"
 
 export default function HeroSection() {
@@ -27,14 +28,8 @@ export default function HeroSection() {
               endless scrolling!
             </p>
             <div className="flex flex-wrap gap-4 justify-center md:justify-start">
-              <Button className="bg-amber-500 hover:bg-amber-600 text-black gap-2">
-                <Apple className="h-5 w-5" />
-                App Store
-              </Button>
-              <Button className="bg-purple-700 hover:bg-purple-800 gap-2">
-                <Play className="h-5 w-5" />
-                Google Play
-              </Button>
+              <StoreButton store="app-store" />
+              <StoreButton store="google-play" />
             </div>
           </div>
 

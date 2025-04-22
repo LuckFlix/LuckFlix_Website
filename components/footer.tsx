@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Apple, Play, Instagram, Twitter, Facebook, Mail } from "lucide-react"
+import { Instagram, Twitter, Facebook, Mail } from "lucide-react"
+import { StoreButton } from "@/components/ui/store-button"
 
 export default function Footer() {
   return (
@@ -48,15 +49,9 @@ export default function Footer() {
 
           <div className="space-y-4">
             <h4 className="font-bold text-lg">Download</h4>
-            <div className="flex flex-col gap-3">
-              <Button className="bg-amber-500 hover:bg-amber-600 text-black gap-2 justify-start">
-                <Apple className="h-5 w-5" />
-                App Store
-              </Button>
-              <Button className="bg-purple-700 hover:bg-purple-800 gap-2 justify-start">
-                <Play className="h-5 w-5" />
-                Google Play
-              </Button>
+            <div className="flex flex-row gap-3">
+              <StoreButton store="app-store" />
+              <StoreButton store="google-play" />
             </div>
             <div className="pt-2">
               <Link
