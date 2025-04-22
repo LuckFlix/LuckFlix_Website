@@ -1,0 +1,8 @@
+{
+  "github.copilot.chat.commitMessageGeneration.instructions": [
+    {
+      "text": "Commit mesajları için şu formatı kullan: <type>: <description>\n\nTürkçe commit mesajları oluştur. <type> için şunlardan birini kullan: feat (yeni özellik), fix (hata düzeltme), docs (dokümantasyon), style (stil değişiklikleri), refactor (kod yapısını değiştirme), test (test ekleme/düzenleme), chore (diğer değişiklikler). <description> kısmı kısa ve öz olmalı, fiil ile başlamalı. Uzun açıklamalar gerekiyorsa, boş satırdan sonra detaylı açıklama ekle. İlk satır 50 karakteri geçmesin."
+    }
+  ],
+  "github.copilot.chat.commitMessageGeneration.enabled": true
+}
