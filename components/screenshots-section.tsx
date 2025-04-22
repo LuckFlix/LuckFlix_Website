@@ -12,7 +12,7 @@ export default function ScreenshotsSection() {
       src: "/screenshots/home_screen.png", // Example path
       alt: "LuckFlix Home Screen",
       title: "Home Screen",
-      description: "Browse categories or spin the roulette for recommendations",
+      description: "Spin the wheel or browse categories to find your next watch.", // Updated description
     },
     {
       src: "/screenshots/genre_selection.png", // Updated path
@@ -24,7 +24,7 @@ export default function ScreenshotsSection() {
       src: "/screenshots/movie_details.png", // Example path
       alt: "LuckFlix Movie Details",
       title: "Movie Details",
-      description: "Get comprehensive information about any title",
+      description: "View trailers, cast, ratings, and more for any movie or show.", // Updated description
     },
     {
       src: "/screenshots/history_screen.png", // Changed path (assuming a new screenshot exists)
