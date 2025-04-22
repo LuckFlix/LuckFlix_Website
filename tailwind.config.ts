@@ -24,8 +24,11 @@ const config: Config = {
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
+        amber: {
+          500: "#FFC000", // Changed from default #F59E0B
+        },
         primary: {
-          DEFAULT: "#FFC107", // Amber/gold
+          DEFAULT: "#FFC000", // Amber/gold - This seems close to #FFC000 already
           foreground: "#000000",
         },
         secondary: {
