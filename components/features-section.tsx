@@ -1,7 +1,7 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Dices, Tv, Smile, HelpCircle } from "lucide-react"
+import { Dices, Tv, Smile, History } from "lucide-react"
 
 export default function FeaturesSection() {
   const features = [
@@ -21,9 +21,9 @@ export default function FeaturesSection() {
       description: "Test your movie knowledge with our fun emoji-based movie guessing game.",
     },
     {
-      icon: <HelpCircle className="h-10 w-10 text-amber-500" />,
-      title: "Movie Quiz",
-      description: "Challenge yourself with trivia about your favorite films and discover new facts.",
+      icon: <History className="h-10 w-10 text-amber-500" />,
+      title: "Viewing History",
+      description: "Keep track of the movies and shows you've discovered and watched.",
     },
   ]
 

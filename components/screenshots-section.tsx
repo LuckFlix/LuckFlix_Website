@@ -9,28 +9,28 @@ import { motion } from "framer-motion"
 export default function ScreenshotsSection() {
   const screenshots = [
     {
-      src: "/placeholder.svg?height=600&width=300",
+      src: "/screenshots/home_screen.png", // Example path
       alt: "LuckFlix Home Screen",
       title: "Home Screen",
       description: "Browse categories or spin the roulette for recommendations",
     },
     {
-      src: "/placeholder.svg?height=600&width=300",
+      src: "/screenshots/roulette_feature.png", // Example path
       alt: "LuckFlix Roulette Feature",
       title: "Movie Roulette",
       description: "Spin to discover your next favorite movie",
     },
     {
-      src: "/placeholder.svg?height=600&width=300",
+      src: "/screenshots/movie_details.png", // Example path
       alt: "LuckFlix Movie Details",
       title: "Movie Details",
       description: "Get comprehensive information about any title",
     },
     {
-      src: "/placeholder.svg?height=600&width=300",
-      alt: "LuckFlix Quiz Feature",
-      title: "Movie Quiz",
-      description: "Test your knowledge with fun interactive quizzes",
+      src: "/screenshots/history_screen.png", // Changed path (assuming a new screenshot exists)
+      alt: "LuckFlix History Screen", // Changed alt text
+      title: "Viewing History", // Changed title
+      description: "Easily access your previously watched or discovered titles.", // Changed description
     },
   ]
 
@@ -58,7 +58,7 @@ export default function ScreenshotsSection() {
           {/* Mobile view - single screenshot with navigation */}
           <div className="md:hidden relative">
             <div className="flex justify-center">
-              <div className="relative w-[280px] h-[560px]">
+              <div className="relative w-[280px] h-[605px]"> {/* Adjusted height */}
                 {/* Phone mockup */}
                 <div className="absolute inset-0 rounded-[40px] border-4 border-gray-800 bg-black z-10 overflow-hidden">
                   <Image
@@ -68,9 +68,6 @@ export default function ScreenshotsSection() {
                     className="object-cover"
                   />
                 </div>
-
-                {/* Phone notch */}
-                <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-32 h-6 bg-black rounded-b-xl z-20"></div>
 
                 {/* Glow effect */}
                 <div className="absolute -inset-4 bg-gradient-to-r from-purple-700/30 to-amber-500/30 rounded-[60px] blur-xl z-0"></div>
@@ -113,7 +110,7 @@ export default function ScreenshotsSection() {
                 viewport={{ once: true }}
                 className="group"
               >
-                <div className="relative w-[160px] h-[320px] mx-auto">
+                <div className="relative w-[160px] h-[346px] mx-auto"> {/* Adjusted height */}
                   {/* Phone mockup */}
                   <div className="absolute inset-0 rounded-[30px] border-2 border-gray-800 bg-black z-10 overflow-hidden group-hover:scale-105 transition-transform duration-300">
                     <Image
@@ -123,9 +120,6 @@ export default function ScreenshotsSection() {
                       className="object-cover"
                     />
                   </div>
-
-                  {/* Phone notch */}
-                  <div className="absolute top-0 left-1/2 transform -translate-x-1/2 w-20 h-3 bg-black rounded-b-lg z-20"></div>
 
                   {/* Glow effect */}
                   <div className="absolute -inset-2 bg-gradient-to-r from-purple-700/30 to-amber-500/30 rounded-[40px] blur-md z-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
