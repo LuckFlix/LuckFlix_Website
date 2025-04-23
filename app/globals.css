@@ -29,10 +29,26 @@ body {
   @apply bg-black text-white;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+.section-reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.section-reveal.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 @layer base {
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }

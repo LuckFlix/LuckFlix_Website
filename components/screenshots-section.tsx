@@ -1,12 +1,14 @@
 "use client"
 
-import { useState } from "react"
+import { useState, useRef, useEffect } from "react"
 import Image from "next/image"
 import { ChevronLeft, ChevronRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
 
 export default function ScreenshotsSection() {
+  const sectionRef = useRef<HTMLElement>(null)
+
   const screenshots = [
     {
       src: "/screenshots/home_screen.png", // Example path
@@ -44,8 +46,29 @@ export default function ScreenshotsSection() {
     setCurrentIndex((prevIndex) => (prevIndex === 0 ? screenshots.length - 1 : prevIndex - 1))
   }
 
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && sectionRef.current) {
+          sectionRef.current.classList.add('in-view')
+        }
+      },
+      { threshold: 0.2 }
+    )
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current)
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current)
+      }
+    }
+  }, [])
+
   return (
-    <section id="screenshots" className="py-16 md:py-24 relative">
+    <section ref={sectionRef} id="screenshots" className="py-16 md:py-24 relative section-reveal">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">App Screenshots</h2>

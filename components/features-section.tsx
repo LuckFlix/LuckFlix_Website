@@ -1,9 +1,33 @@
 "use client"
 
+import { useEffect, useRef } from "react"
 import { motion } from "framer-motion"
 import { Dices, Tv, Smile, History } from "lucide-react"
 
 export default function FeaturesSection() {
+  const sectionRef = useRef<HTMLElement>(null)
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && sectionRef.current) {
+          sectionRef.current.classList.add('in-view')
+        }
+      },
+      { threshold: 0.2 }
+    )
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current)
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current)
+      }
+    }
+  }, [])
+
   const features = [
     {
       icon: <Dices className="h-10 w-10 text-amber-500" />,
@@ -28,7 +52,7 @@ export default function FeaturesSection() {
   ]
 
   return (
-    <section id="features" className="py-16 md:py-24 relative">
+    <section ref={sectionRef} id="features" className="py-16 md:py-24 relative section-reveal">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Key Features</h2>
