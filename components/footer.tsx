@@ -9,7 +9,10 @@ export default function Footer() {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="space-y-4">
-            <h3 className="text-amber-500 font-bold text-2xl">LuckFlix</h3>
+            <h3 className="font-bold text-2xl">
+              <span className="text-amber-500">Luck</span>
+              <span className="text-white">Flix</span>
+            </h3>
             <p className="text-white/70">
               Discover movies and TV shows with our unique roulette-style recommendation system.
             </p>
