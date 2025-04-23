@@ -70,7 +70,7 @@ export default function ScreenshotsSection() {
                 </div>
 
                 {/* Glow effect */}
-                <div className="absolute -inset-4 bg-gradient-to-r from-purple-700/30 to-amber-500/30 rounded-[60px] blur-xl z-0"></div>
+                <div className="absolute -inset-8 bg-gradient-to-r from-purple-600/60 to-[rgba(100,255,218,0.77)] rounded-[60px] blur-2xl z-0"></div>
               </div>
             </div>
 
@@ -122,7 +122,7 @@ export default function ScreenshotsSection() {
                   </div>
 
                   {/* Glow effect */}
-                  <div className="absolute -inset-2 bg-gradient-to-r from-purple-700/30 to-amber-500/30 rounded-[40px] blur-md z-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  <div className="absolute -inset-6 bg-gradient-to-r from-purple-500/70 to-[rgba(100,255,218,0.77)] rounded-[40px] blur-2xl z-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
 
                 <div className="mt-6 text-center">
