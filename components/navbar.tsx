@@ -40,7 +40,10 @@ export default function Navbar() {
       <div className="container mx-auto px-4 flex justify-between items-center">
         <Link href="/" className="flex items-center gap-2">
           <Image src="/logo.png" alt="LuckFlix Logo" width={48} height={48} className="h-12 w-auto" />
-          <span className="text-amber-500 font-bold text-2xl">LuckFlix</span>
+          <span className="font-bold text-2xl">
+            <span className="text-amber-500">Luck</span>
+            <span className="text-white">Flix</span>
+          </span>
         </Link>
 
         {/* Desktop Navigation */}
