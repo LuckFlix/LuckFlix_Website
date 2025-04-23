@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Instagram, Twitter, Mail, Youtube } from "lucide-react"
+import { Instagram, Mail, Youtube } from "lucide-react"
 import { StoreButton } from "@/components/ui/store-button"
 
 export default function Footer() {
@@ -24,10 +24,6 @@ export default function Footer() {
               <Link href="https://www.youtube.com/@LuckFlix_App" className="text-white/70 hover:text-amber-500 transition-colors">
                 <Youtube className="h-5 w-5" />
                 <span className="sr-only">YouTube</span>
-              </Link>
-              <Link href="#" className="text-white/70 hover:text-amber-500 transition-colors">
-                <Twitter className="h-5 w-5" />
-                <span className="sr-only">Twitter</span>
               </Link>
             </div>
           </div>
