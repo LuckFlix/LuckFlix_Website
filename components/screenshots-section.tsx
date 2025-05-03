@@ -11,25 +11,25 @@ export default function ScreenshotsSection() {
 
   const screenshots = [
     {
-      src: "/screenshots/home_screen.png", // Example path
+      src: "./screenshots/home_screen.png", // Example path
       alt: "LuckFlix Home Screen",
       title: "Home Screen",
       description: "Spin the wheel or browse categories to find your next watch.", // Updated description
     },
     {
-      src: "/screenshots/genre_selection.png", // Updated path
+      src: "./screenshots/genre_selection.png", // Updated path
       alt: "LuckFlix Genre Selection Screen", // Updated alt text
       title: "Genre Selection", // Updated title
       description: "Choose your preferred genres for tailored recommendations.", // Updated description
     },
     {
-      src: "/screenshots/movie_details.png", // Example path
+      src: "./screenshots/movie_details.png", // Example path
       alt: "LuckFlix Movie Details",
       title: "Movie Details",
       description: "View trailers, cast, ratings, and more for any movie or show.", // Updated description
     },
     {
-      src: "/screenshots/history_screen.png", // Changed path (assuming a new screenshot exists)
+      src: "./screenshots/history_screen.png", // Changed path (assuming a new screenshot exists)
       alt: "LuckFlix History Screen", // Changed alt text
       title: "Viewing History", // Changed title
       description: "Easily access your previously watched or discovered titles.", // Changed description
@@ -85,7 +85,7 @@ export default function ScreenshotsSection() {
                 {/* Phone mockup */}
                 <div className="absolute inset-0 rounded-[40px] border-4 border-gray-800 bg-black z-10 overflow-hidden">
                   <Image
-                    src={screenshots[currentIndex].src || "/placeholder.svg"}
+                    src={screenshots[currentIndex].src || "./placeholder.svg"}
                     alt={screenshots[currentIndex].alt}
                     fill
                     className="object-cover"
@@ -137,7 +137,7 @@ export default function ScreenshotsSection() {
                   {/* Phone mockup */}
                   <div className="absolute inset-0 rounded-[30px] border-2 border-gray-800 bg-black z-10 overflow-hidden group-hover:scale-105 transition-transform duration-300">
                     <Image
-                      src={screenshot.src || "/placeholder.svg"}
+                      src={screenshot.src || "./placeholder.svg"}
                       alt={screenshot.alt}
                       fill
                       className="object-cover"

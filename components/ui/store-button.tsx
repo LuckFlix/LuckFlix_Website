@@ -15,8 +15,8 @@ export function StoreButton({
 }: StoreButtonProps) {
   // Use the provided image assets
   const imageSrc = store === "app-store" 
-    ? "/images/app-store-logo.svg" 
-    : "/images/google-play-badge.png"
+    ? "./images/app-store-logo.svg" 
+    : "./images/google-play-badge.png"
   
   // According to guidelines, maintain proper clear space around badges
   // We'll use the same container height for both buttons to ensure visual consistency
