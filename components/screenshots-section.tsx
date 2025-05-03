@@ -11,7 +11,7 @@ export default function ScreenshotsSection() {
 
   const screenshots = [
     {
-      src: "./screenshots/home_screen.png", // Example path
+      src: "./screenshots/Home_screen.png", // Example path
       alt: "LuckFlix Home Screen",
       title: "Home Screen",
       description: "Spin the wheel or browse categories to find your next watch.", // Updated description
