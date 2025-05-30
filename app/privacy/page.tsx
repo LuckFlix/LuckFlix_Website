@@ -14,7 +14,7 @@ export default function PrivacyPolicy() {
         </Link>
 
         <h1 className="text-3xl font-bold mb-4 text-amber-500">Privacy Policy</h1>
-        <p className="text-gray-400 mb-6">Last updated: May 08, 2025</p>
+        <p className="text-gray-400 mb-6">Last updated: May 30, 2025</p>
         <p className="mb-4">This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.</p>
         <p className="mb-8">We use Your Personal data to provide and improve the Service. By using the Service, You agree to the collection and use of information in accordance with this Privacy Policy. This Privacy Policy has been created with the help of the <a href="https://www.termsfeed.com/privacy-policy-generator/" target="_blank" rel="noopener noreferrer" className="text-amber-500 hover:underline">Privacy Policy Generator</a>.</p>
         
@@ -152,9 +152,25 @@ export default function PrivacyPolicy() {
         <p className="mb-4">Our Service does not address anyone under the age of 13. We do not knowingly collect personally identifiable information from anyone under the age of 13. If You are a parent or guardian and You are aware that Your child has provided Us with Personal Data, please contact Us. If We become aware that We have collected Personal Data from anyone under the age of 13 without verification of parental consent, We take steps to remove that information from Our servers.</p>
         <p className="mb-8">If We need to rely on consent as a legal basis for processing Your information and Your country requires consent from a parent, We may require Your parent's consent before We collect and use that information.</p>
         
+        <h2 className="text-2xl font-semibold mb-3 mt-8 text-amber-500">Intellectual Property</h2>
+        <p className="mb-4">The Application and its original content, features, functionality, design, and all associated intellectual property are and will remain the exclusive property of the Company and its licensors. The Service is protected by copyright, trademark, and other laws of both Turkey and foreign countries.</p>
+        <p className="mb-4">You may not reproduce, distribute, modify, create derivative works of, publicly display, publicly perform, republish, download, store or transmit any of the material from our Application without the prior written consent of the Company, except as permitted by applicable law.</p>
+        <p className="mb-8">Any unauthorized use of the Application or its content may violate intellectual property laws and result in legal action.</p>
+        
         <h2 className="text-2xl font-semibold mb-3 mt-8 text-amber-500">Links to Other Websites</h2>
         <p className="mb-4">Our Service may contain links to other websites that are not operated by Us. If You click on a third party link, You will be directed to that third party's site. We strongly advise You to review the Privacy Policy of every site You visit.</p>
         <p className="mb-8">We have no control over and assume no responsibility for the content, privacy policies or practices of any third party sites or services.</p>
+        
+        <h2 className="text-2xl font-semibold mb-3 mt-8 text-amber-500">Third-Party Services and APIs</h2>
+        <p className="mb-4">The Application makes use of third-party services and APIs to deliver certain features and improve the overall user experience. One such service is The Movie Database (TMDb) API, which provides access to publicly available movie and TV show metadata such as titles, descriptions, posters, and related media content.</p>
+        <p className="mb-4">Please note the following regarding our use of the TMDb API:</p>
+        <ul className="list-disc pl-6 mb-6 space-y-2">
+          <li>The Application uses the TMDb API solely to retrieve and display information about movies and TV shows.</li>
+          <li>We do not share any personal data of users with TMDb.</li>
+          <li>The use of TMDb data within the Application is subject to TMDb's Terms of Use and Privacy Policy, which can be found on their official website.</li>
+          <li>TMDb is not responsible for the content or services provided by this Application.</li>
+        </ul>
+        <p className="mb-8">By using the Application, You acknowledge and agree that movie-related information and images are sourced via the TMDb API and used under their terms.</p>
         
         <h2 className="text-2xl font-semibold mb-3 mt-8 text-amber-500">Changes to this Privacy Policy</h2>
         <p className="mb-4">We may update Our Privacy Policy from time to time. We will notify You of any changes by posting the new Privacy Policy on this page.</p>
