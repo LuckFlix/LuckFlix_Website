@@ -1,9 +1,15 @@
+"use client"
+
+import { useState } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Instagram, Mail, Youtube } from "lucide-react"
 import { StoreButton } from "@/components/ui/store-button"
+import { ComingSoonModal } from "@/components/ui/coming-soon-modal"
 
 export default function Footer() {
+  const [showComingSoonModal, setShowComingSoonModal] = useState(false)
+
   return (
     <footer className="bg-black/80 backdrop-blur-md border-t border-purple-900/30 py-12">
       <div className="container mx-auto px-4">
@@ -40,16 +46,16 @@ export default function Footer() {
               <Link href="/privacy" className="text-white/70 hover:text-amber-500 transition-colors">
                 Privacy Policy
               </Link>
-              <Link href="#" className="text-white/70 hover:text-amber-500 transition-colors">
-                Terms of Service
-              </Link>
             </nav>
           </div>
 
           <div className="space-y-4">
             <h4 className="font-bold text-lg">Download</h4>
             <div className="flex flex-row gap-3">
-              <StoreButton store="app-store" />
+              <StoreButton 
+                store="app-store" 
+                onAppStoreClick={() => setShowComingSoonModal(true)}
+              />
               <StoreButton store="google-play" />
             </div>
             <div className="pt-2">
@@ -68,6 +74,11 @@ export default function Footer() {
           <p>© {new Date().getFullYear()} LuckFlix. All rights reserved.</p>
         </div>
       </div>
+
+      <ComingSoonModal 
+        isOpen={showComingSoonModal}
+        onClose={() => setShowComingSoonModal(false)}
+      />
     </footer>
   )
 }

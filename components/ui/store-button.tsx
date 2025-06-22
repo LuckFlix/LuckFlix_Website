@@ -6,11 +6,13 @@ import { cn } from "@/lib/utils"
 
 interface StoreButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   store: "app-store" | "google-play"
+  onAppStoreClick?: () => void
 }
 
 export function StoreButton({
   store,
   className,
+  onAppStoreClick,
   ...props
 }: StoreButtonProps) {
   // Use the provided image assets
@@ -20,6 +22,19 @@ export function StoreButton({
   
   // According to guidelines, maintain proper clear space around badges
   // We'll use the same container height for both buttons to ensure visual consistency
+  const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    if (store === "app-store" && onAppStoreClick) {
+      onAppStoreClick()
+    } else if (store === "google-play") {
+      window.open("https://play.google.com/store/apps/details?id=com.luckflix.app", "_blank")
+    }
+    
+    // Call the original onClick if provided
+    if (props.onClick) {
+      props.onClick(e)
+    }
+  }
+  
   return (
     <button
       className={cn(
@@ -27,6 +42,7 @@ export function StoreButton({
         className
       )}
       {...props}
+      onClick={handleClick}
     >
       <Image 
         src={imageSrc}
