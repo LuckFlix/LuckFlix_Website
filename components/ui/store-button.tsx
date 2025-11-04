@@ -6,15 +6,16 @@ import { cn } from "@/lib/utils"
 
 interface StoreButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   store: "app-store" | "google-play"
-  onAppStoreClick?: () => void
 }
 
 export function StoreButton({
   store,
   className,
-  onAppStoreClick,
   ...props
 }: StoreButtonProps) {
+  const APP_STORE_URL = "https://apps.apple.com/us/app/luckflix/id6754615509"
+  const PLAY_STORE_URL = "https://play.google.com/store/apps/details?id=com.luckflix.app"
+
   // Use the provided image assets
   const imageSrc = store === "app-store" 
     ? "./images/app-store-logo.svg" 
@@ -23,10 +24,10 @@ export function StoreButton({
   // According to guidelines, maintain proper clear space around badges
   // We'll use the same container height for both buttons to ensure visual consistency
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-    if (store === "app-store" && onAppStoreClick) {
-      onAppStoreClick()
-    } else if (store === "google-play") {
-      window.open("https://play.google.com/store/apps/details?id=com.luckflix.app", "_blank")
+    if (store === "app-store") {
+      window.open(APP_STORE_URL, "_blank")
+    } else {
+      window.open(PLAY_STORE_URL, "_blank")
     }
     
     // Call the original onClick if provided

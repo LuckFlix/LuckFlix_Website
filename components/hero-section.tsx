@@ -1,15 +1,11 @@
 "use client"
 
 import { useState } from "react"
-import { Button } from "@/components/ui/button"
 import { StoreButton } from "@/components/ui/store-button"
-import { ComingSoonModal } from "@/components/ui/coming-soon-modal"
-import { Apple, Play } from "lucide-react"
 import Image from "next/image"
 
 export default function HeroSection() {
   const [spinning, setSpinning] = useState(false)
-  const [showComingSoonModal, setShowComingSoonModal] = useState(false)
 
   const spinRoulette = () => {
     if (!spinning) {
@@ -31,10 +27,7 @@ export default function HeroSection() {
               endless scrolling!
             </p>
             <div className="flex flex-wrap gap-4 justify-center md:justify-start">
-              <StoreButton
-                store="app-store"
-                onAppStoreClick={() => setShowComingSoonModal(true)}
-              />
+              <StoreButton store="app-store" />
               <StoreButton store="google-play" />
             </div>
           </div>
@@ -52,11 +45,6 @@ export default function HeroSection() {
           </div>
         </div>
       </div>
-
-      <ComingSoonModal
-        isOpen={showComingSoonModal}
-        onClose={() => setShowComingSoonModal(false)}
-      />
 
       <style jsx>{`
         .clip-triangle {

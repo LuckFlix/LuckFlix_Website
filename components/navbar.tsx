@@ -29,6 +29,20 @@ export default function Navbar() {
     smoothScrollTo(sectionId)
   }
 
+  // Open relevant store with best-effort platform detection
+  const APP_STORE_URL = "https://apps.apple.com/us/app/luckflix/id6754615509"
+  const PLAY_STORE_URL = "https://play.google.com/store/apps/details?id=com.luckflix.app"
+  const handleDownloadClick = () => {
+    const ua = navigator.userAgent || navigator.vendor || (window as any).opera
+    if (/android/i.test(ua)) {
+      window.open(PLAY_STORE_URL, "_blank")
+    } else if (/iPad|iPhone|iPod/.test(ua) || (navigator.userAgent.includes("Mac") && "ontouchend" in window)) {
+      window.open(APP_STORE_URL, "_blank")
+    } else {
+      window.open(APP_STORE_URL, "_blank")
+    }
+  }
+
   return (
     <motion.header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -69,7 +83,9 @@ export default function Navbar() {
           >
             Privacy Policy
           </Link>
-          <Button className="bg-amber-500 hover:bg-amber-600 text-black">Download Now</Button>
+          <Button className="bg-amber-500 hover:bg-amber-600 text-black" onClick={handleDownloadClick}>
+            Download Now
+          </Button>
         </div>
 
         {/* Mobile Menu Button - Now with higher z-index */}
@@ -111,7 +127,13 @@ export default function Navbar() {
           >
             Privacy Policy
           </Link>
-          <Button className="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-black mt-4 w-full py-6 text-lg font-bold shadow-lg">
+          <Button
+            className="bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-black mt-4 w-full py-6 text-lg font-bold shadow-lg"
+            onClick={() => {
+              handleDownloadClick()
+              setIsMenuOpen(false)
+            }}
+          >
             Download Now
           </Button>
         </div>
