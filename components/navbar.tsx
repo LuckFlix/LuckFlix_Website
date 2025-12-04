@@ -54,7 +54,7 @@ export default function Navbar() {
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
         <Link href="/" className="flex items-center gap-2 relative z-[60]">
-          <Image src="./logo.png" alt="LuckFlix Logo" width={48} height={48} className="h-12 w-auto" />
+          <Image src="/logo.png" alt="LuckFlix Logo" width={48} height={48} className="h-12 w-auto" />
           <span className="font-bold text-2xl">
             <span className="text-amber-500">Luck</span>
             <span className="text-white">Flix</span>

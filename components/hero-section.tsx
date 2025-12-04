@@ -35,7 +35,7 @@ export default function HeroSection() {
           {/* Image Mockup */}
           <div className="w-full md:w-1/2 flex justify-center mt-8 md:mt-0">
             <Image
-              src="./3_Mochup.png" // Path relative to the public folder
+              src="/3_Mochup.png"
               alt="LuckFlix App Mockup"
               width={600} // Adjust width as needed for visual balance
               height={600} // Adjust height as needed for visual balance
